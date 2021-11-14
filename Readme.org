@@ -2,9 +2,9 @@
 
 After looking for (and failing to find) a basic camera implementation for Godot I decided to build out this simple example library.
 
-When launched the app opens the camera selector (CameraSelect.tscn), and after the user clicks on a chosen camera a new scene is displayed with the users camera input rendered to a viewport.
+When launched the app opens the camera selector (~CameraSelect.tscn~), and after the user clicks on a chosen camera a new scene is displayed with the users camera input rendered to a viewport.
 
-When the user clicks "Capture" the `photo_taken` signal is emitted including the image at that moment from the camera.
+When the user clicks "Capture" the ~photo_taken~ signal is emitted including the image at that moment from the camera.
 
 ** Signals
 
@@ -12,4 +12,12 @@ When the user clicks "Capture" the `photo_taken` signal is emitted including the
 - camera_selected(camera: CameraFeed) is emitted when the user clicks on any camera
 
 *** Camera.tscn
-- photo_taken(ViewportTexture) is emitted when the user clicks on `capture` in the camera view
+- photo_taken(ViewportTexture) is emitted when the user clicks on ~capture~ in the camera view
+
+** Images
+
+#+ATTR_HTML: height="500px"
+[[./images/camera-selector.png]]
+
+#+ATTR_HTML: height="500px"
+[[./images/camera-interface.png]]
