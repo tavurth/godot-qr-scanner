@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Camera.gd" type="Script" id=1]
+
+[sub_resource type="Environment" id=1]
+background_mode = 6
+
+[node name="Camera" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ViewportContainer" type="ViewportContainer" parent="."]
+margin_right = 512.0
+margin_bottom = 816.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
+stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 512, 816 )
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="RenderPort" type="Spatial" parent="ViewportContainer/Viewport"]
+
+[node name="Camera" type="Camera" parent="ViewportContainer/Viewport/RenderPort"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="ViewportContainer/Viewport/RenderPort"]
+environment = SubResource( 1 )
+
+[node name="CaptureButton" type="Button" parent="."]
+margin_top = 820.0
+margin_right = 512.0
+margin_bottom = 1024.0
+rect_min_size = Vector2( 0, 80 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Capture"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="CaptureButton" to="." method="_on_CaptureButton_pressed"]
