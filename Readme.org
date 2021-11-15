@@ -9,10 +9,10 @@ When the user clicks "Capture" the ~photo_taken~ signal is emitted including the
 ** Signals
 
 *** CameraSelect.tscn
-- camera_selected(camera: CameraFeed) is emitted when the user clicks on any camera
+- ~camera_selected(camera: CameraFeed)~ is emitted when the user clicks on any camera
 
 *** Camera.tscn
-- photo_taken(ViewportTexture) is emitted when the user clicks on ~capture~ in the camera view
+- ~photo_taken(photo: ViewportTexture)~ is emitted when the user clicks on ~capture~ in the camera view
 
 ** Images
 
