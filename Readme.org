@@ -1,5 +1,11 @@
 #+TITLE: Godot Camera
 
+** NOTE
+
+This currently does not work as CameraServer support is lacking on Android :(
+
+** Base
+
 After looking for (and failing to find) a basic camera implementation for Godot I decided to build out this simple example library.
 
 When launched the app opens the camera selector (~CameraSelect.tscn~), and after the user clicks on a chosen camera a new scene is displayed with the users camera input rendered to a viewport.
