@@ -3,10 +3,7 @@ extends Control
 var CameraSelect = preload("CameraSelect.tscn")
 var CameraApp = preload("Camera.tscn")
 
-func _photo_taken(photo):
-	print(photo)
-
-func _camera_selected(camera):
+func _camera_selected(_camera):
 	# Remove selector
 	self.get_child(0).queue_free()
 	
@@ -14,9 +11,7 @@ func _camera_selected(camera):
 	self.setup_camera()
 
 func setup_camera():
-	var camera = CameraApp.instance()
-	camera.connect("photo_taken", self, "_photo_taken")
-	self.add_child(camera)
+	self.add_child(CameraApp.instance())
 
 func setup_select():
 	var selector = CameraSelect.instance()

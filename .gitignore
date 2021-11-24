@@ -1,3 +1,5 @@
+.mono
+build/*
 .DS_Store
 .idea
 *.log

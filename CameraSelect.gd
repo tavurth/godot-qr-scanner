@@ -15,6 +15,8 @@ func make_camera(camera: CameraFeed):
 func setup():
 	# Find all our possible cameras
 	var feeds = CameraServer.feeds()
+
+	print("Found cameras", feeds)
 	
 	# We did not find any cameras to process
 	# Show an error instead
