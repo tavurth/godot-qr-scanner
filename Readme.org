@@ -2,7 +2,7 @@
 
 ** NOTE
 
-This currently does not work as CameraServer support is lacking on Android :(
+This currently does not work as [[https://github.com/godotengine/godot/issues/46531][CameraServer support is lacking on Android]] :(
 
 ** Base
 
